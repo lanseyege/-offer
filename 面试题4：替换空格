@@ -1,0 +1,12 @@
+字符串：c/c++为了节省内存，把常量字符串放到单独的一个内存区域。当几个指针赋值给相同的常量字符串时，它们实际上会指向相同的
+内存区域。但用常量内存初始化数组，情况却有所不同。
+例子：
+char str1[] = "hello world";
+char str2[] = "hello world";
+str1 == str2
+char *str3 = "hello world";
+char *str4 = "hello world";
+str3 != str4
+
+题目：实现一个函数，把字符串中的每个空格替换成“%20”。
+思路：后向法
