@@ -8,7 +8,7 @@ void replace(char string[], int length){
       n++;
   }
   int p1=length;
-  length += n * 3;
+  length += n * 2;
   int p2=length;
   while(p1 >0){
   while(string[p1] != ' ' ){
