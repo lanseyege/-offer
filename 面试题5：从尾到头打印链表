@@ -1,0 +1,20 @@
+链表
+struct ListNode{
+  int m_nValue;
+  ListNode* m_pNext;
+}
+//add tail
+void AddToTail(ListNode** pHead, int value){
+  ListNode* pNew = new ListNode();
+  pNew->m_nValue=value;
+  pNew->m_pNext=NULL;
+  if(*pHead == NULL){
+    *phead=pNew;
+  }
+  else{
+    ListNode* pNode = *pHead;
+    while(pNode->m_pNext != NULL)
+      pNode=pNode->m_pNext;
+    pNode-m_pNext=pNew;
+  }
+}
