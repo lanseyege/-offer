@@ -1,0 +1,31 @@
+指针函数和函数指针
+1、指针函数
+本质上还是函数，只不过返回类型是某一类型的指针
+比如： int *f(x, y);
+
+2、函数指针
+函数指针是指向函数的指针变量，本质上是一个指针变量
+int (*f)(int x) /*声明一个函数指针*/
+f=func /*将func函数的首地址赋给指针f*/
+
+void (*funcp)();
+void FileFunc(), EditFunc();
+main()
+        {
+            funcp=FileFunc;
+            (*funcp)();
+            funcp=EditFunc;
+            (*funcp)();
+        }
+
+        void FileFunc()
+        {
+            printf(FileFunc\n);
+        }
+
+        void EditFunc()
+        {
+            printf(EditFunc\n);
+        }
+        
+        
