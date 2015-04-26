@@ -17,4 +17,5 @@ bool btree_number(binary_tree_node* root, int number){
     if(right = btree_number(root->right,number - root->value)))
       print();
     return left || right;
+  return true;
 }
