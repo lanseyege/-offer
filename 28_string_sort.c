@@ -1,13 +1,20 @@
-void orint_string(char* string){
+void print_string(char* string){
   if(string == NULL)
     return NULL;
-  int n = strlen(string);
-  print_string_it(string, n, 0);
+  print_string(string, string);
 }
-void print_string_it(char* string, int n, int index){
-  if(index == n-1)
-    print
-  for(int i=0; i<n;i++){
-    pirnt_string_it(string[i]
+void print_string(char* string, char* begin){
+  if(*begin == '\0'){
+    printf("%s\n",string);
+  }else{
+    for(char *ch = begin; *ch != '\0'; ++ch){
+      char temp = *ch;
+      *ch = *begin;
+      *begin = temp;
+      print_string(string, begin+1);
+      temp = *ch;
+      *ch = *begin;
+      *begin = temp;
+    }
   }
 }
