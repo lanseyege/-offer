@@ -14,7 +14,14 @@ void merge(int* A, int* B, int p, int q, int r){
     else
       B[i++]=A[high++];
   }
-  
+  while(low<=q)
+    B[i++]=A[low++];
+  while(high<=r)
+    B[i++]=A[high++];
+  low = p;
+  for(i=0;i<r-q+1;i++){
+    A[low+i]=B[i];
+  }
 }
 void merge_sort(int* A, int* B, int p, int r){
   if(p<r){
