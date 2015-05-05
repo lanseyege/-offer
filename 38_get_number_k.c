@@ -17,6 +17,6 @@ void get_number_k(int* data, int k, int p, int r){
 }
 int main(){
   int data[]={1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6};
-  get_number_k(data,3,0,16);
+  get_number_k(data,3,0,17);//后一个数是len(data)
   printf("%d\n",sum);
 }
